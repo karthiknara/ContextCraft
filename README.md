@@ -6,6 +6,10 @@ ContextCraft is an open-source Python toolkit under development, designed to str
 
 This project is currently in the planning and early development phase. More information and features will be added as development progresses.
 
+## Why 'ContextCraft'?
+
+The name 'ContextCraft' was chosen to reflect the tool's capability to craft contextual data that is tailored for the training of language models. Just as a craftsperson meticulously shapes materials into a final product, ContextCraft shapes raw data into structured prompt-completion pairs. These pairs are essential for language models to understand and generate human-like text, making ContextCraft a pivotal tool in the context of AI and machine learning.
+
 ## Planned Features
 
 - Data Input and Validation
@@ -31,10 +35,11 @@ ContextCraft is licensed under the GNU General Public License v2.0 - see the [LI
 
 ## Contact
 
-For questions and support, please contact [kn568@dragons.drexel.edu](mailto:kn568@dragons.drexel.edu).
+For questions and support, please contact [Karthik Narasimhan](mailto:kn568@dragons.drexel.edu).
 
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
+
