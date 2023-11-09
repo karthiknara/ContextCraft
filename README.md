@@ -31,7 +31,7 @@ ContextCraft is licensed under the GNU General Public License v2.0 - see the [LI
 
 ## Contact
 
-For questions and support, please contact [email@example.com](mailto:email@example.com).
+For questions and support, please contact [kn568@dragons.drexel.edu](mailto:kn568@dragons.drexel.edu).
 
 ## Acknowledgments
 
