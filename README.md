@@ -8,7 +8,7 @@ This project is currently in the planning and early development phase. More info
 
 ## Why 'ContextCraft'?
 
-The name 'ContextCraft' was chosen to reflect the tool's capability to craft contextual data that is tailored for the training of language models. Just as a craftsperson meticulously shapes materials into a final product, ContextCraft shapes raw data into structured prompt-completion pairs. These pairs are essential for language models to understand and generate human-like text, making ContextCraft a pivotal tool in the context of AI and machine learning.
+The name 'ContextCraft' was chosen to reflect the tool's capability to craft contextual data that is tailored for the fine-tuning of language models. Just as a craftsperson meticulously shapes materials into a final product, ContextCraft shapes raw data into structured prompt-completion pairs. These pairs are essential for language models to understand and generate human-like text, making ContextCraft a pivotal tool in the context of AI and machine learning.
 
 ## Planned Features
 
