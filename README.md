@@ -1,6 +1,6 @@
 # ContextCraft
 
-ContextCraft is an open-source Python toolkit under development, designed to streamline the process of converting multi-modal relational datasets into prompt-completion pairs for training language models.
+ContextCraft is an open-source Python toolkit under development, designed to streamline the process of converting multi-modal relational datasets into prompt-completion pairs for fine-tuning language models.
 
 ## Status
 
