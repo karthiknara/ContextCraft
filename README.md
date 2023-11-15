@@ -10,6 +10,10 @@ This project is currently in the planning and early development phase. More info
 
 The name 'ContextCraft' was chosen to reflect the tool's capability to craft contextual data that is tailored for the fine-tuning of language models. Just as a craftsperson meticulously shapes materials into a final product, ContextCraft shapes raw data into structured prompt-completion pairs. These pairs are essential for language models to understand and generate human-like text, making ContextCraft a pivotal tool in the context of AI and machine learning.
 
+## Using ContextCraft for Fine-tuning LMs
+
+ContextCraft is particularly suited for preparing datasets to fine-tune pre-trained language models. The tool provides the ability to craft prompts that align with your specific domain, enabling more effective fine-tuning and thereby enhancing the model's performance on specialized tasks.
+
 ## Planned Features
 
 - Data Input and Validation
@@ -35,11 +39,10 @@ ContextCraft is licensed under the GNU General Public License v2.0 - see the [LI
 
 ## Contact
 
-For questions and support, please contact [Karthik Narasimhan](mailto:kn568@dragons.drexel.edu).
+For questions and support, please contact Karthik Narasimhan.
 
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
-
