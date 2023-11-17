@@ -43,3 +43,5 @@ def validate_data_types(df, expected_dtypes):
 # dtype_issues = validate_data_types(df, expected_dtypes)
 
 # Handle the issues as necessary, e.g., log them, raise exceptions, etc.
+
+# You can extend this module with more sophisticated validation depending on your requirements, such as range checks, uniqueness checks, and checks for categorical data consistency
