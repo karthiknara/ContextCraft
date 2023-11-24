@@ -2,6 +2,7 @@
 
 import pandas as pd
 import os
+from .validator import check_missing_values, validate_data_types
 
 
 def load_csv(file_path, delimiter=',', quotechar='"', encoding='utf-8', skipinitialspace=True):
@@ -51,9 +52,55 @@ def load_csv(file_path, delimiter=',', quotechar='"', encoding='utf-8', skipinit
         # Handle any other exception and re-raise with a user-friendly message
         raise Exception(f"An error occurred while loading the CSV file: {e}")
 
+
 # Example usage:
 # try:
 #     df = load_csv('path/to/your/data.csv')
 # except Exception as e:
 #     print(e)
 
+def load_multiple_csv(file_paths, delimiter=',', quotechar='"', encoding='utf-8', skipinitialspace=True):
+    """
+    Load multiple CSV files and return a list of pandas DataFrames.
+
+    Parameters:
+    file_paths (list of str): The paths to the CSV files to be loaded.
+    delimiter (str): The delimiter used in the CSV files.
+    quotechar (str): The character used to quote fields containing special characters.
+    encoding (str): The encoding format used in the CSV files.
+    skipinitialspace (bool): Skip spaces after delimiter.
+
+    Returns:
+    list of pd.DataFrame: List containing DataFrames for each CSV file.
+    """
+    dataframes = []
+    for file_path in file_paths:
+        df = load_csv(file_path, delimiter, quotechar, encoding, skipinitialspace)
+        dataframes.append(df)
+    return dataframes
+
+
+# Example usage for multiple CSV files:
+# file_paths = ['path/to/your/data1.csv', 'path/to/your/data2.csv', ...]
+# try:
+#     dfs = load_multiple_csv(file_paths)
+# except Exception as e:
+#     print(e)
+
+def load_and_validate_csv(file_path, delimiter=',', quotechar='"', expected_dtypes=None):
+    df = load_csv(file_path, delimiter, quotechar)
+
+    # Check for missing values
+    missing_values = check_missing_values(df)
+    if missing_values:
+        # Handle or log missing values
+        pass
+
+    # Validate data types
+    if expected_dtypes:
+        dtype_issues = validate_data_types(df, expected_dtypes)
+        if dtype_issues:
+            # Handle or log data type issues
+            pass
+
+    return df

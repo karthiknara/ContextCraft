@@ -36,6 +36,7 @@ def validate_data_types(df, expected_dtypes):
 
     return mismatch_info
 
+
 # Example usage:
 # df = pd.DataFrame({...})
 # expected_dtypes = {'column1': 'int64', 'column2': 'float64', ...}
@@ -45,3 +46,43 @@ def validate_data_types(df, expected_dtypes):
 # Handle the issues as necessary, e.g., log them, raise exceptions, etc.
 
 # You can extend this module with more sophisticated validation depending on your requirements, such as range checks, uniqueness checks, and checks for categorical data consistency
+
+# contextcraft/data_input/validator.py
+
+import pandas as pd
+
+
+# ... [existing functions] ...
+
+def validate_multiple_dataframes(dataframes, expected_dtypes_list):
+    """
+    Validate multiple DataFrames against a list of expected data types.
+
+    Parameters:
+    dataframes (list of pd.DataFrame): List of DataFrames to validate.
+    expected_dtypes_list (list of dict): List of dictionaries with expected data types for each DataFrame.
+
+    Returns:
+    list of dict: List of dictionaries containing data type mismatch info for each DataFrame.
+    """
+    if len(dataframes) != len(expected_dtypes_list):
+        raise ValueError("Length of dataframes list and expected_dtypes_list must be the same")
+
+    validation_results = []
+    for df, expected_dtypes in zip(dataframes, expected_dtypes_list):
+        dtype_issues = validate_data_types(df, expected_dtypes)
+        validation_results.append(dtype_issues)
+
+    return validation_results
+
+# Example usage for multiple DataFrames:
+# dfs = [pd.DataFrame({...}), pd.DataFrame({...}), ...]
+# expected_dtypes_list = [{'column1': 'int64', 'column2': 'float64'}, {'column1': 'object', ...}, ...]
+# try:
+#     validation_results = validate_multiple_dataframes(dfs, expected_dtypes_list)
+#     for result in validation_results:
+#         if result:
+#             # Handle or log data type issues
+#             pass
+# except Exception as e:
+#     print(e)
