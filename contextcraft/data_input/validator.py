@@ -49,8 +49,6 @@ def validate_data_types(df, expected_dtypes):
 
 # contextcraft/data_input/validator.py
 
-import pandas as pd
-
 
 # ... [existing functions] ...
 
